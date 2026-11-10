@@ -1,0 +1,23 @@
+.svg {
+  width: 32px;
+  height: 64px;
+  flex: none;
+}
+
+.part {
+  fill: var(--silhouette-base);
+  transition: fill var(--duration) ease;
+}
+
+.active {
+  fill: var(--silhouette-active);
+}
+
+@media (forced-colors: active) {
+  .part {
+    fill: GrayText;
+  }
+  .active {
+    fill: CanvasText;
+  }
+}

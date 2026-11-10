@@ -1,0 +1,137 @@
+.field {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.legend {
+  padding: 0;
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.abbr {
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-1);
+}
+
+.wide {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@container region (min-width: 34rem) {
+  .wide {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+}
+
+.option {
+  position: relative;
+  display: flex;
+  min-width: 0;
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: 3.5rem;
+  min-width: var(--tap);
+  padding: var(--space-2) var(--space-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  text-align: center;
+  pointer-events: none;
+  transition:
+    background-color var(--duration) ease,
+    border-color var(--duration) ease,
+    color var(--duration) ease;
+}
+
+.option:hover .box {
+  border-color: var(--color-border-strong);
+}
+
+.input:checked + .box {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.input:focus-visible + .box {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.number {
+  font-size: 1.0625rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.text {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  hyphens: manual;
+}
+
+@container region (min-width: 30rem) {
+  .text {
+    font-size: 0.8125rem;
+  }
+}
+
+.swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgb(0 0 0 / 0.25);
+  flex: none;
+}
+
+.swatch[data-empty] {
+  background: transparent;
+  border-style: dashed;
+  border-color: currentColor;
+}
+
+.input:checked + .box .swatch {
+  border-color: var(--color-on-accent);
+  box-shadow: 0 0 0 1px var(--color-on-accent);
+}
+
+@media (forced-colors: active) {
+  .input:checked + .box {
+    outline: 3px solid Highlight;
+  }
+}

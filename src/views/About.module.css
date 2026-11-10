@@ -1,0 +1,120 @@
+.about {
+  max-width: 46rem;
+  padding-bottom: var(--space-6);
+}
+
+.title {
+  margin: var(--space-3) 0 var(--space-4);
+  font-size: 1.75rem;
+}
+
+.title:focus {
+  outline: none;
+}
+
+.title:focus-visible {
+  outline: 3px solid var(--color-focus);
+}
+
+.about section {
+  margin-bottom: var(--space-5);
+}
+
+.about h2 {
+  margin: 0 0 var(--space-2);
+  font-size: 1.25rem;
+}
+
+.about p {
+  margin: 0 0 var(--space-3);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap);
+  padding: 0 var(--space-3) 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  color: var(--color-accent-strong);
+  text-decoration: none;
+}
+
+.back:hover {
+  background: var(--color-accent-soft);
+}
+
+.formula {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  margin-bottom: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.tableWrap:focus-visible {
+  outline: 3px solid var(--color-focus);
+}
+
+.about table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.about th,
+.about td {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.about thead th {
+  background: var(--color-surface-muted);
+  font-weight: 600;
+}
+
+.about tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.history > li + li {
+  margin-top: var(--space-4);
+}
+
+.versionHeading {
+  margin: 0 0 var(--space-1);
+  font-size: 1rem;
+}
+
+.date {
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.history ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.minor {
+  color: var(--color-text-muted);
+}
