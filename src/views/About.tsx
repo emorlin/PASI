@@ -44,6 +44,7 @@ export function About() {
             <thead>
               <tr>
                 <th scope="col">Region</th>
+                <th scope="col">Omfattar</th>
                 <th scope="col">Andel av kroppsytan</th>
                 <th scope="col">Vikt</th>
               </tr>
@@ -52,6 +53,7 @@ export function About() {
               {REGIONS.map((r) => (
                 <tr key={r.id}>
                   <th scope="row">{r.name}</th>
+                  <td>{r.description}</td>
                   <td>{r.bodyPercent} %</td>
                   <td>0,{r.weight}</td>
                 </tr>
@@ -69,7 +71,7 @@ export function About() {
         <h2 id="scales">Så tolkas poängen</h2>
         <p>
           Rodnad (E), tjocklek (I) och fjällning (S) bedöms från 0 till 4. Utbredning (A) anges
-          som poäng från 0 till 6. Under 1 % utbredning ger poäng 0.
+          som poäng från 0 till 6, där 0 betyder ingen utbredning.
         </p>
         <div className={styles.tableWrap} role="region" aria-label="Poängskalor" tabIndex={0}>
           <table>

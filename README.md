@@ -4,6 +4,17 @@ En webbapp där en sjuksköterska räknar ut PASI (Psoriasis Area and Severity I
 All beräkning sker i webbläsaren. Inga uppgifter sparas eller skickas. Det enda undantaget
 är nyckeln `pasi:lastSeenVersion` i localStorage, som styr nyhetsnotisen.
 
+## Regioner
+
+| Region | Omfattar | Andel av kroppsytan | 1 handflata |
+| ------ | -------- | ------------------- | ----------- |
+| Huvud | Huvud med nacke, hals | 10 % | 10 % |
+| Bål | Bål med ljumskar, axiller, underliv | 30 % | 3,3 % |
+| Armar | Armar (minus armhålor) | 20 % | 5 % |
+| Ben | Ben med skinkor | 40 % | 2,5 % |
+
+Utbredning (A) anges som poäng 0–6, där 0 betyder ingen utbredning.
+
 ## Kom igång
 
 ```bash
