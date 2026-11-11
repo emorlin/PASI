@@ -10,6 +10,14 @@ export type ChangelogEntry = {
 /** Senaste versionen först. Lägg till en post varje gång versionen i package.json höjs. */
 export const changelog: ChangelogEntry[] = [
   {
+    version: '1.0.1',
+    date: '2026-11-11',
+    items: [
+      'Tydligare beskrivning av vad varje region omfattar, till exempel "Bål med ljumskar, axiller, underliv".',
+      'Utbredning 0 heter nu bara "Ingen".',
+    ],
+  },
+  {
     version: '1.0.0',
     date: '2026-11-10',
     items: [
