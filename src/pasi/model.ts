@@ -12,7 +12,8 @@ export type Region = {
   /** Andel av kroppsytan i procent. */
   bodyPercent: number;
   palmPercent: string;
-  note?: string;
+  /** Beskrivning av vilka kroppsdelar regionen omfattar. */
+  description: string;
 };
 
 export type Field = {
@@ -21,13 +22,39 @@ export type Field = {
   labels: readonly string[];
 };
 
-const GROIN_NOTE = 'Armhålor och ljumskar räknas till bålen, glutéerna till benen.';
-
 export const REGIONS: readonly Region[] = [
-  { id: 'head', name: 'Huvud', weight: 1, bodyPercent: 10, palmPercent: '10' },
-  { id: 'trunk', name: 'Bål', weight: 3, bodyPercent: 30, palmPercent: '3,3', note: GROIN_NOTE },
-  { id: 'arms', name: 'Armar', weight: 2, bodyPercent: 20, palmPercent: '5' },
-  { id: 'legs', name: 'Ben', weight: 4, bodyPercent: 40, palmPercent: '2,5', note: GROIN_NOTE },
+  {
+    id: 'head',
+    name: 'Huvud',
+    description: 'Huvud med nacke, hals',
+    weight: 1,
+    bodyPercent: 10,
+    palmPercent: '10',
+  },
+  {
+    id: 'trunk',
+    name: 'Bål',
+    description: 'Bål med ljumskar, axiller, underliv',
+    weight: 3,
+    bodyPercent: 30,
+    palmPercent: '3,3',
+  },
+  {
+    id: 'arms',
+    name: 'Armar',
+    description: 'Armar (minus armhålor)',
+    weight: 2,
+    bodyPercent: 20,
+    palmPercent: '5',
+  },
+  {
+    id: 'legs',
+    name: 'Ben',
+    description: 'Ben med skinkor',
+    weight: 4,
+    bodyPercent: 40,
+    palmPercent: '2,5',
+  },
 ];
 
 export const FIELDS: readonly Field[] = [
@@ -42,7 +69,7 @@ export const FIELDS: readonly Field[] = [
   {
     id: 'A',
     name: 'Utbredning',
-    labels: ['Ingen (<1 %)', '1–9 %', '10–29 %', '30–49 %', '50–69 %', '70–89 %', '90–100 %'],
+    labels: ['Ingen', '1–9 %', '10–29 %', '30–49 %', '50–69 %', '70–89 %', '90–100 %'],
   },
 ];
 

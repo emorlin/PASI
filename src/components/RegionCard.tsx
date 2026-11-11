@@ -19,9 +19,8 @@ export function RegionCard({ region }: { region: Region }) {
       </legend>
       <div id={helpId} className={styles.help}>
         <p>
-          {region.name} = {region.bodyPercent} % av kroppsytan (1 handflata = {region.palmPercent} %)
+          {region.description} = {region.bodyPercent} % av kroppsytan (1 handflata = {region.palmPercent} %)
         </p>
-        {region.note && <p>{region.note}</p>}
       </div>
       <div className={styles.fields}>
         {FIELDS.map((field) => (
